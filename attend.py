@@ -41,11 +41,12 @@ with open("records.json", "r+") as records:
 def checkData(data):
     data = data.decode()
     student_name = studentDetails[data]["name"]
+    student_roll = str(studentDetails[data]["roll"])
     if student_name in names:
-        print(student_name + ' is Already Present')
+        print("Roll No. " + student_roll + ": " + student_name + ' is Already Present')
     else:
-        print('\n' + student_name + ' Present done')
-    enterData(student_name)
+        print('\n' + "Roll No. " + student_roll + ": " + student_name + ' Present done')
+        enterData(student_name)
 
 
 while True:
@@ -53,7 +54,7 @@ while True:
     decodedObject = pyzbar.decode(frame)
     for obj in decodedObject:
         checkData(obj.data)
-        time.sleep(10)
+        time.sleep(1)
 
     cv2.imshow('Frame', frame)
 
