@@ -29,8 +29,7 @@ for i in range(0, len(lines)):
         contrast=1.0,
         brightness=1.0,
         save_name=str(lines[i] + '.bmp'),
-        # save_dir=""+"QRIDRecords"+"/"+lines[i]
-        save_dir=f"QRCodes/{lines[i]}"
+        save_dir=path
     )
 
     name = str(name)

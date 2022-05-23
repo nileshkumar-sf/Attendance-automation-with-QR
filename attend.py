@@ -1,4 +1,5 @@
 import base64
+from datetime import datetime
 
 import cv2
 # import numpy as np
@@ -8,9 +9,17 @@ import time
 # import pybase64
 import json
 
+import pandas as pd
+
 # start webcam
 
 cap = cv2.VideoCapture(0)
+
+# df = pd.DataFrame(["Name","Entry Time"])
+entry_time = []
+df = pd.DataFrame(entry_time, columns=["Name", "Entry Time"])
+
+
 
 names = []
 
@@ -45,6 +54,7 @@ def checkData(data):
     if student_name in names:
         print("Roll No. " + student_roll + ": " + student_name + ' is Already Present')
     else:
+        entry_time.append([student_name, datetime.now()])
         print('\n' + "Roll No. " + student_roll + ": " + student_name + ' Present done')
         enterData(student_name)
 
@@ -61,7 +71,17 @@ while True:
     # close
     if cv2.waitKey(1) & 0xff == ord('s'):
         break
+for i in range(len(entry_time)):
+    df = df.append({"Name":entry_time[i][0], "Entry Time":entry_time[i][1]}, ignore_index=True)
+# print(entry_time)
+
+print(df)
+
+df.to_csv('attendance.csv')
 
 cv2.destroyAllWindows()
+
+
+# print(entry_time)
 
 fob.close()
