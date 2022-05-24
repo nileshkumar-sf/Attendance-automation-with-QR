@@ -1,52 +1,5 @@
 {
     "studentDetails": {
-        "b'RElTSEFOVCBLQU5OQVVKSVlB'": {
-            "roll": 1,
-            "name": "DISHANT KANNAUJIYA"
-        },
-        "b'UFJJWUFNIFZFUk1B'": {
-            "roll": 2,
-            "name": "PRIYAM VERMA"
-        },
-        "b'U0hVQkhBTSBTUklWQVNUQVZB'": {
-            "roll": 3,
-            "name": "SHUBHAM SRIVASTAVA"
-        },
-        "b'TklMRVNIIEtVTUFS'": {
-            "roll": 4,
-            "name": "NILESH KUMAR"
-        },
-        "b'QVlVU0ggU0hBTktIV0FS'": {
-            "roll": 5,
-            "name": "AYUSH SHANKHWAR"
-        },
-        "b'QUtBU0ggUEFM'": {
-            "roll": 6,
-            "name": "AKASH PAL"
-        },
-        "b'S1JJU0hOQU0gUkFTVE9HSQ=='": {
-            "roll": 7,
-            "name": "KRISHNAM RASTOGI"
-        },
-        "b'Q0hJVFJBTlNIVSBTSEFSTUE='": {
-            "roll": 8,
-            "name": "CHITRANSHU SHARMA"
-        },
-        "b'QkFTU0FNIFVMTEFI'": {
-            "roll": 9,
-            "name": "BASSAM ULLAH"
-        },
-        "b'RklST1ogQUxBTQ=='": {
-            "roll": 10,
-            "name": "FIROZ ALAM"
-        },
-        "b'WUFTSCBTUklWQVNUQVZB'": {
-            "roll": 11,
-            "name": "YASH SRIVASTAVA"
-        },
-        "b'S1VTSEFHUkEgQVRVTA=='": {
-            "roll": 12,
-            "name": "KUSHAGRA ATUL"
-        }
+        
     }
 }

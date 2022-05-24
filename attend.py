@@ -16,8 +16,8 @@ import pandas as pd
 cap = cv2.VideoCapture(0)
 
 # df = pd.DataFrame(["Name","Entry Time"])
-entry_time = []
-df = pd.DataFrame(entry_time, columns=["Name", "Entry Time"])
+entry_details = []
+df = pd.DataFrame(entry_details, columns=["Name", "Entry Date", "Entry Time"])
 
 
 
@@ -54,7 +54,7 @@ def checkData(data):
     if student_name in names:
         print("Roll No. " + student_roll + ": " + student_name + ' is Already Present')
     else:
-        entry_time.append([student_name, datetime.now()])
+        entry_details.append([student_name, datetime.now().date() , datetime.now().time().strftime('%H:%M:%S')])
         print('\n' + "Roll No. " + student_roll + ": " + student_name + ' Present done')
         enterData(student_name)
 
@@ -71,8 +71,8 @@ while True:
     # close
     if cv2.waitKey(1) & 0xff == ord('s'):
         break
-for i in range(len(entry_time)):
-    df = df.append({"Name":entry_time[i][0], "Entry Time":entry_time[i][1]}, ignore_index=True)
+for i in range(len(entry_details)):
+    df = df.append({"Name":entry_details[i][0],"Entry Date": entry_details[i][1], "Entry Time":entry_details[i][2]}, ignore_index=True)
 # print(entry_time)
 
 print(df)
